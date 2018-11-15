@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [06/Nov/2018:16:27:55 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do?tablesName=WB_SERVICE_INFO HTTP/1.1" 200 31476 http-bio-8022-exec-1 2907
+0:0:0:0:0:0:0:1 - - [06/Nov/2018:16:27:56 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8022-exec-3 0

@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [15/Nov/2018:16:29:54 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do HTTP/1.1" 200 1549 http-bio-8022-exec-1 277
+0:0:0:0:0:0:0:1 - - [15/Nov/2018:16:29:54 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8022-exec-2 0

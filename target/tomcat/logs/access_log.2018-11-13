@@ -1,0 +1,6 @@
+0:0:0:0:0:0:0:1 - - [13/Nov/2018:13:28:22 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do HTTP/1.1" 200 1549 http-bio-8022-exec-1 302
+0:0:0:0:0:0:0:1 - - [13/Nov/2018:13:28:23 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8022-exec-3 0
+0:0:0:0:0:0:0:1 - - [13/Nov/2018:13:28:31 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do?tablesName=wb_info_watch HTTP/1.1" 200 11191 http-bio-8022-exec-5 1482
+0:0:0:0:0:0:0:1 - - [13/Nov/2018:13:29:08 +0800] "GET /DATABASE_SQL/dTs/getTableMessageByTable.do?tableName=wb_info_watch&fieldsLine=wb_type%0D%0Aappeal_reason_a%0D%0Aappeal_reason_b%0D%0Aappeal_reason_c%0D%0Aappeal_reason_d HTTP/1.1" 200 2649 http-bio-8022-exec-8 207
+0:0:0:0:0:0:0:1 - - [13/Nov/2018:13:44:02 +0800] "GET /DATABASE_SQL/dTs/getTableMessageByTable.do?tableName=wb_info_watch&fieldsLine=wb_type%0D%0Aappeal_reason_a%0D%0Aappeal_reason_b%0D%0Aappeal_reason_c%0D%0Aappeal_reason_d HTTP/1.1" 200 2649 http-bio-8022-exec-2 122
+0:0:0:0:0:0:0:1 - - [13/Nov/2018:13:45:39 +0800] "GET /DATABASE_SQL/dTs/getTableMessageByTable.do?tableName=wb_service_info&fieldsLine=info_class%0D%0Aservice_obj HTTP/1.1" 200 1888 http-bio-8022-exec-4 120

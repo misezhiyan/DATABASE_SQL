@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dTs.mapper.dTsMapper_CSS">
+
+	<!-- 获取表字段 -->
+	<select id="getFieldList" parameterType="java.lang.String" resultType="com.dTs.po.Field">
+		SELECT T1.COLUMN_NAME,
+		T1.DATA_TYPE,
+		(CASE
+		WHEN T1.DATA_PRECISION IS NULL THEN
+		TO_CHAR(T1.DATA_LENGTH)
+		ELSE
+		(CASE
+		WHEN T1.DATA_SCALE IS NOT NULL THEN
+		T1.DATA_PRECISION || ',' || T1.DATA_SCALE
+		ELSE
+		TO_CHAR(T1.DATA_PRECISION)
+		END)
+		END) DATA_LENGTH,
+		T1.NULLABLE,
+		T2.COMMENTS
+		FROM USER_TAB_COLS T1, USER_COL_COMMENTS T2
+		WHERE T1.TABLE_NAME = T2.TABLE_NAME
+		AND T1.COLUMN_NAME = T2.COLUMN_NAME
+		AND T1.TABLE_NAME =
+		UPPER(#{_parameter})
+	</select>
+
+	<!-- 获取表注释 -->
+	<select id="getTableComment" parameterType="java.lang.String" resultType="java.lang.String">
+		SELECT comments
+		FROM USER_TAB_COMMENTS
+		WHERE TABLE_NAME = UPPER(#{_parameter})
+	</select>
+
+	<!-- 保持连接存活 -->
+	<select id="keepAlive" resultType="java.util.Date">
+	SELECT SYSDATE FROM dual
+	</select>
+</mapper>

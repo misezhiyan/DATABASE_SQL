@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [08/Nov/2018:16:28:39 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do HTTP/1.1" 200 1549 http-bio-8022-exec-1 310
+0:0:0:0:0:0:0:1 - - [08/Nov/2018:16:28:59 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do?tablesName=CALL_PERSON_IMPOWER HTTP/1.1" 200 4119 http-bio-8022-exec-3 1774

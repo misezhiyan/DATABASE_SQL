@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- 引入properties文件 -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:database.properties" />
+	</bean>
+
+	<!-- CSS测试 START -->
+	<bean id="dataSource_CSS" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${driver}" />
+		<property name="url" value="${DataSourceURL_CSS}" />
+		<property name="username" value="${UserName_CSS}" />
+		<property name="password" value="${Password_CSS}" />
+		<!-- 初始化连接大小 -->
+		<property name="initialSize" value="${initialSize}" />
+		<!-- 连接池最大数量 -->
+		<property name="maxActive" value="${maxActive}" />
+		<!-- 连接池最大空闲 -->
+		<property name="maxIdle" value="${maxIdle}" />
+		<!-- 连接池最小空闲 -->
+		<property name="minIdle" value="${minIdle}" />
+		<!-- 获取连接最大等待时间 -->
+		<property name="maxWait" value="${maxWait}" />
+	</bean>
+
+	<!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
+	<bean id="sqlSessionFactory_CSS" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource_CSS" />
+		<property name="configLocation" value="classpath:mapper_CSS.xml" />
+		<!-- 自动扫描mapping.xml文件，**表示迭代查找,也可在sqlMapConfig.xml中单独指定xml文件 -->
+		<!-- 
+		<property name="mapperLocations" value="classpath*:com/hisense/dao/po/*Mapper.xml" />
+		 -->
+	</bean>
+
+	<!-- mybatis spring sqlSessionTemplate,使用时直接让spring注入即可 -->
+	<bean id="sqlSessionTemplate_CSS" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory_CSS"></constructor-arg>
+	</bean>
+
+	<!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
+	<bean id="transactionManager_CSS"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource_CSS" />
+	</bean>
+	<!-- CSS测试 END -->
+	
+	<!-- CSS正式  START -->
+	<bean id="dataSource_CSS_ZHENGSHI" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${driver}" />
+		<property name="url" value="${DataSourceURL_CSS_ZHENGSHI}" />
+		<property name="username" value="${UserName_CSS_ZHENGSHI}" />
+		<property name="password" value="${Password_CSS_ZHENGSHI}" />
+		<!-- 初始化连接大小 -->
+		<property name="initialSize" value="${initialSize}" />
+		<!-- 连接池最大数量 -->
+		<property name="maxActive" value="${maxActive}" />
+		<!-- 连接池最大空闲 -->
+		<property name="maxIdle" value="${maxIdle}" />
+		<!-- 连接池最小空闲 -->
+		<property name="minIdle" value="${minIdle}" />
+		<!-- 获取连接最大等待时间 -->
+		<property name="maxWait" value="${maxWait}" />
+	</bean>
+
+	<!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
+	<bean id="sqlSessionFactory_CSS_ZHENGSHI" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource_CSS_ZHENGSHI" />
+		<property name="configLocation" value="classpath:mapper_CSS.xml" />
+		<!-- 自动扫描mapping.xml文件，**表示迭代查找,也可在sqlMapConfig.xml中单独指定xml文件 -->
+		<!-- 
+		<property name="mapperLocations" value="classpath*:com/hisense/dao/po/*Mapper.xml" />
+		 -->
+	</bean>
+
+	<!-- mybatis spring sqlSessionTemplate,使用时直接让spring注入即可 -->
+	<bean id="sqlSessionTemplate_CSS_ZHENGSHI" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory_CSS_ZHENGSHI"></constructor-arg>
+	</bean>
+
+	<!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
+	<bean id="transactionManager_CSS_ZHENGSHI"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource_CSS_ZHENGSHI" />
+	</bean>
+	<!-- CSS正式  END -->
+	
+	<!-- CRM测试 START -->
+	<bean id="dataSource_CRM" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${driver}" />
+		<property name="url" value="${DataSourceURL_CRM}" />
+		<property name="username" value="${UserName_CRM}" />
+		<property name="password" value="${Password_CRM}" />
+		<!-- 初始化连接大小 -->
+		<property name="initialSize" value="${initialSize}" />
+		<!-- 连接池最大数量 -->
+		<property name="maxActive" value="${maxActive}" />
+		<!-- 连接池最大空闲 -->
+		<property name="maxIdle" value="${maxIdle}" />
+		<!-- 连接池最小空闲 -->
+		<property name="minIdle" value="${minIdle}" />
+		<!-- 获取连接最大等待时间 -->
+		<property name="maxWait" value="${maxWait}" />
+	</bean>
+
+	<!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
+	<bean id="sqlSessionFactory_CRM" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource_CRM" />
+		<property name="configLocation" value="classpath:mapper_CRM.xml" />
+		<!-- 自动扫描mapping.xml文件，**表示迭代查找,也可在sqlMapConfig.xml中单独指定xml文件 -->
+		<!-- 
+		<property name="mapperLocations" value="classpath*:com/hisense/dao/po/*Mapper.xml" />
+		 -->
+	</bean>
+
+	<!-- mybatis spring sqlSessionTemplate,使用时直接让spring注入即可 -->
+	<bean id="sqlSessionTemplate_CRM" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory_CRM"></constructor-arg>
+	</bean>
+
+	<!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
+	<bean id="transactionManager_CRM"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource_CRM" />
+	</bean>
+	<!-- CSS测试 END -->
+	
+	<!-- CSS正式  START -->
+	<bean id="dataSource_CRM_ZHENGSHI" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${driver}" />
+		<property name="url" value="${DataSourceURL_CRM_ZHENGSHI}" />
+		<property name="username" value="${UserName_CRM_ZHENGSHI}" />
+		<property name="password" value="${Password_CRM_ZHENGSHI}" />
+		<!-- 初始化连接大小 -->
+		<property name="initialSize" value="${initialSize}" />
+		<!-- 连接池最大数量 -->
+		<property name="maxActive" value="${maxActive}" />
+		<!-- 连接池最大空闲 -->
+		<property name="maxIdle" value="${maxIdle}" />
+		<!-- 连接池最小空闲 -->
+		<property name="minIdle" value="${minIdle}" />
+		<!-- 获取连接最大等待时间 -->
+		<property name="maxWait" value="${maxWait}" />
+	</bean>
+
+	<!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
+	<bean id="sqlSessionFactory_CRM_ZHENGSHI" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource_CRM_ZHENGSHI" />
+		<property name="configLocation" value="classpath:mapper_CRM.xml" />
+		<!-- 自动扫描mapping.xml文件，**表示迭代查找,也可在sqlMapConfig.xml中单独指定xml文件 -->
+		<!-- 
+		<property name="mapperLocations" value="classpath*:com/hisense/dao/po/*Mapper.xml" />
+		 -->
+	</bean>
+
+	<!-- mybatis spring sqlSessionTemplate,使用时直接让spring注入即可 -->
+	<bean id="sqlSessionTemplate_CRM_ZHENGSHI" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory_CRM_ZHENGSHI"></constructor-arg>
+	</bean>
+
+	<!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
+	<bean id="transactionManager_CRM_ZHENGSHI"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource_CRM_ZHENGSHI" />
+	</bean>
+	<!-- CSS正式  END -->
+	
+	<bean id="queryDao" class="com.dTs.dao.base.impl.QueryDaoImpl">
+		<property name="sqlSession_CSS" ref="sqlSessionTemplate_CSS" />
+		<property name="sqlSession_CSS_ZHENGSHI" ref="sqlSessionTemplate_CSS_ZHENGSHI" />
+		<property name="sqlSession_CRM" ref="sqlSessionTemplate_CRM" />
+		<property name="sqlSession_CRM_ZHENGSHI" ref="sqlSessionTemplate_CRM_ZHENGSHI" />
+	</bean>
+	<bean id="updateDao" class="com.dTs.dao.base.impl.UpdateDaoImpl">
+		<property name="sqlSession_CSS" ref="sqlSessionTemplate_CSS" />
+		<property name="sqlSession_CSS_ZHENGSHI" ref="sqlSessionTemplate_CSS_ZHENGSHI" />
+		<property name="sqlSession_CRM" ref="sqlSessionTemplate_CRM" />
+		<property name="sqlSession_CRM_ZHENGSHI" ref="sqlSessionTemplate_CRM_ZHENGSHI" />
+	</bean>
+</beans>

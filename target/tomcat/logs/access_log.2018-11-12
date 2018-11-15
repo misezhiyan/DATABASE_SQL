@@ -1,0 +1,13 @@
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:14:23:29 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do HTTP/1.1" 200 1549 http-bio-8022-exec-1 276
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:14:23:29 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8022-exec-2 0
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:14:23:44 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do?tablesName=WB_CUSTOMER HTTP/1.1" 200 12153 http-bio-8022-exec-3 1516
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:14:25:13 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do?tablesName=WB_SERVICE_INFO HTTP/1.1" 200 31476 http-bio-8022-exec-5 205
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:14:26:05 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do?tablesName=CD_CUSTOMER_LEVEL HTTP/1.1" 200 4152 http-bio-8022-exec-6 71
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:14:26:28 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do?tablesName=WB_CUSTOMER_PRODUCT HTTP/1.1" 200 14179 http-bio-8022-exec-7 70
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:14:26:52 +0800] "GET /DATABASE_SQL/dTs/getTableMessageByTable.do?tableName=WB_CUSTOMER_PRODUCT&fieldsLine=customer_type HTTP/1.1" 200 1620 http-bio-8022-exec-8 1289
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:14:26:59 +0800] "GET /DATABASE_SQL/dTs/getTableMessageByTable.do?tableName=CD_CUSTOMER_LEVEL&fieldsLine=customer_type HTTP/1.1" 200 1608 http-bio-8022-exec-9 21
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:14:27:04 +0800] "GET /DATABASE_SQL/dTs/getTableMessageByTable.do?tableName=WB_CUSTOMER&fieldsLine=customer_type HTTP/1.1" 200 1575 http-bio-8022-exec-10 44
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:14:27:08 +0800] "GET /DATABASE_SQL/dTs/getTableMessageByTable.do?tableName=WB_SERVICE_INFO&fieldsLine=customer_type HTTP/1.1" 200 1730 http-bio-8022-exec-10 113
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:14:27:21 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do?tablesName=WB_SERVICE_INFO HTTP/1.1" 200 31476 http-bio-8022-exec-10 127
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:14:27:36 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do?tablesName=WB_CUSTOMER HTTP/1.1" 200 12153 http-bio-8022-exec-10 46
+0:0:0:0:0:0:0:1 - - [12/Nov/2018:16:36:02 +0800] "GET /DATABASE_SQL/dTs/getTableMessage.do?tablesName=WB_CUSTOMER HTTP/1.1" 200 12153 http-bio-8022-exec-1 2504
